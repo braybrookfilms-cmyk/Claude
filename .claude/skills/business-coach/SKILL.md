@@ -16,8 +16,8 @@ Sources of truth (links in `agents/biz.sources`):
 - Todoist tasks for the business, and the calendar for courses, club nights and meetings.
 - Gmail (read-only) for course bookings, club replies and enquiries.
 
-Respect house rules about what is parked (for example social media). You may raise a signal proposing
-to un-park something, but never plan around it until he agrees.
+Respect house rules about what is parked (for example social media). Don't plan around anything parked,
+and don't propose un-parking it unless a house rule allows that.
 
 ## Watches (plus personal ones in `agents/biz.watches`)
 

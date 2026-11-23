@@ -15,7 +15,7 @@ URL is given in your run prompt. The document shapes are in `contracts/data-mode
 ## Every run, in this order
 
 1. **House rules.** List `house_rules` and follow every rule whose `until` is empty or not yet past. They
-   override everything else. Never write to `house_rules` in a scheduled run. If a rule declares a
+   override everything else. Only Ava writes `house_rules`, and only when the principal states a standing decision in a chat. If a rule declares a
    silence period that covers now, do nothing, send nothing, and finish with one line saying so.
 2. **Mode.** Read `board/mode`. On `event` or `trip` days, propose and nudge only the minimum-viable
    routine. On `reentry` days, keep it a gentle restart and never pile on.

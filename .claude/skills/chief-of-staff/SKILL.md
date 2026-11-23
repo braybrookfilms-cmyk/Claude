@@ -92,8 +92,11 @@ Carry those actions out on your next run, and read the recent `ava_chat` message
 ### When he replies in a window chat
 - "approve N", "no N" or "snooze N to <day>": update those `actions`, then carry out the approved ones right away.
 - New info (numbers, how he feels, decisions): send it to the owning agent's data. Portfolio numbers go to
-  `portfolio` and `portfolio_history`, check-in answers to the running coach's logs, and so on. If he gives
-  you a new standing decision, offer to save it as a house rule, and only save it if he says yes.
+  `portfolio` and `portfolio_history`, check-in answers to the running coach's logs, and so on. If he states
+  a standing decision (something that should hold from now on or until a date), save it straight away as a
+  `house_rules` doc `{id, area, text, added, updated, until?}` in his words and confirm in one line. House
+  rules aren't shown on the Dashboard; he manages them by telling you. If he asks what's in force, list
+  them; if he drops or changes one, delete or update it.
 - Finish with a short "Changed in:" line.
 
 ## EVENING (daily, early evening: planning tomorrow, silent)
