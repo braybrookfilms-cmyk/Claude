@@ -42,9 +42,13 @@ Finish with one line: tomorrow's mode, the window times, and what you scheduled.
 ## WINDOW (one-shot; name `CoS – <Wake|Home|Wind-down> – {DAY}`)
 ```
 {PREAMBLE}
-Run type: WINDOW, window {WINDOW}, date {DATE}. Load chief-of-staff and follow its WINDOW section.
-The principal gets a push notification and may reply in this chat: handle replies as the skill's
-"When he replies" section says.
+Run type: WINDOW, window {WINDOW}, date {DATE}. First, silently put this chat on the Dashboard so he can
+find it: ArtifactData set, collection "checkins", doc_id "{DATE}-{WINDOW}-cos", data {"date":"{DATE}",
+"kind":"{WINDOW}","label":"<Wake|Home|Wind-down>","t":<epoch ms now>,"url":"<this session's
+https://claude.ai/code/session_… link from the Claude-Session line of your git attribution, or "">"}.
+If it already exists, get it and update url and t using its version.
+Then load chief-of-staff and follow its WINDOW section. The principal gets a push notification and may
+reply in this chat: handle replies as the skill's "When he replies" section says.
 ```
 
 ## POST (one-shot; name `Coach – Post: <session> – {DAY}`)
