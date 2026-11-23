@@ -82,6 +82,12 @@ If one exists, update its `why`, `severity` and `until` instead of creating anot
 }
 ```
 
+Actions he asks for directly in the Dashboard chat are created already `approved`, with
+`source: "dashboard-chat"`.
+
+### `ava_chat/<epoch ms>`: the HQ chat with Ava
+`{"role": "user|assistant", "text": "…", "t": 1764000000000, "did": ["what her tools changed"]}`
+
 ### `rnd/<YYYYMMDD>-<slug>`: R&D the Chief of Staff directs
 ```json
 {

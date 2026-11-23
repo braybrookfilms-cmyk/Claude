@@ -41,6 +41,12 @@ If no Dashboard link was given, find it with the Artifact tool (`action: "list"`
 5. Chats he starts don't count toward the 3-message budget: he asked. Finish with a short "Changed in:" line
    if you changed anything.
 
+### The Dashboard chat
+Oli can also talk to you in the "Talk to Ava" box on HQ. That chat runs on the page itself, so it can't call
+tools: it only approves, declines or snoozes actions, dismisses signals, sets `rnd`, and lines up the changes he
+asks for as `actions` with `status: "approved"` and `source: "dashboard-chat"`. Its history is in `ava_chat/*`.
+Carry those actions out on your next run, and read the recent `ava_chat` messages when you need context.
+
 ## MORNING (daily, before the first window)
 
 1. **Fallback.** List scheduled tasks. If **today's** window tasks (named `CoS – <window> – <Day D Mon>`)
@@ -60,10 +66,13 @@ If no Dashboard link was given, find it with the Artifact tool (`action: "list"`
 
 ## WINDOW (one-shot: `wake`, `home` or `winddown`)
 
-1. Read `briefs/<today>` and `pings/<today>`. If 3 pings have already gone out, update the brief and stop.
-2. Gather what's new since the last window: signals created or raised in severity, actions that are
+1. First carry out any `actions` with `status == "approved"` (MORNING step 2). These include changes he
+   approved on HQ or asked for in the Dashboard chat (`source: "dashboard-chat"`). Mention them in this
+   message's "Done" line.
+2. Read `briefs/<today>` and `pings/<today>`. If 3 pings have already gone out, update the brief and stop.
+3. Gather what's new since the last window: signals created or raised in severity, actions that are
    pending, done or failed, and R&D results.
-3. Compose **one** message:
+4. Compose **one** message:
    - **Headline** (one line, with a bit of personality).
    - **Needs you**: up to 5 pending actions, numbered, each a single line. ("Reply 'approve 1,3'.")
    - **Heads-up**: 2–4 lines of what matters next, ranked.
@@ -74,8 +83,8 @@ If no Dashboard link was given, find it with the Artifact tool (`action: "list"`
      - `home`: what's left of today and what tomorrow needs prepared tonight.
      - `winddown`: tomorrow's shape, one thing to protect, wins, and the wind-down nudge from `life`.
        On Sundays this is the WEEKLY review.
-4. If there's genuinely nothing worth saying, send nothing. Mark the window `sent: false, summary: "quiet"`.
-5. Otherwise record the ping in `pings/<today>` first, then mark the signals you included as
+5. If there's genuinely nothing worth saying, send nothing. Mark the window `sent: false, summary: "quiet"`.
+6. Otherwise record the ping in `pings/<today>` first, then mark the signals you included as
    `status: "surfaced"`, then send with SendUserMessage (or as your final reply if that tool isn't available).
 
 ### When he replies in a window chat
