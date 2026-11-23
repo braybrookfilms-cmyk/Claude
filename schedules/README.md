@@ -20,8 +20,8 @@ stored privately on the account, never in this repo.
 The Chief of Staff can push at most 3 times a day; the specialists' sweeps never push.
 
 ## Retire (already disabled; delete once the new set has run cleanly for a week)
-`Film – shoot briefs`, `Film – Sunday production meeting`, `Oli Runs social – daily check`,
-`Oli Runs social – weekly batch`, `Dashboard priorities – Sun`, `Dashboard priorities – Mon/Tue/Wed/Sat`.
+the two disabled film tasks, the two disabled social tasks and the two old
+per-weekday priorities tasks.
 
 ## Cutover order
 1. Seed `agents/*` on the Dashboard (charters, personal watches, source links).
