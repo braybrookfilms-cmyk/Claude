@@ -32,7 +32,7 @@ Sunday: Staff weekly reports at 19:37 → CoS Weekly review as the wind-down mes
 |---|---|---|
 | **0 Groundwork** | Repo, contracts, policy, all six skills, schedule plan | ✅ this commit |
 | **1 Core loop** | Seed `agents/*`; Morning, Evening and window tasks live; Running coach on signals; approvals working in chat | One week with ≤3 pings a day and at least one approval round-trip |
-| **2 Dashboard HQ** | HQ tab: brief, approval queue (Approve, Decline, Snooze), agent status board, signal strips on each tab; Business and Growth tabs; tabs regrouped | He can approve from the Dashboard |
+| **2 Dashboard HQ** | ✅ HQ tab (brief and message windows, approval queue with Approve, Decline and Snooze, signals with Dismiss, team board, R&D). Still to do: signal strips on each tab; Business and Growth tabs; tabs regrouped | He can approve from the Dashboard |
 | **3 Life + Money** | Lifestyle and financial watches live; weekly numbers flow through the Sunday review | Two Sundays of numbers captured |
 | **4 Biz + Growth** | Business coach reading the quest tracker; Growth intake interview; draft goals agreed | Growth goals `active` |
 | **5 Tune** | After 2 weeks: which signals were acted on and which ignored; adjust thresholds and the ping budget; delete retired tasks | Noise is under 1 ignored signal a day |
