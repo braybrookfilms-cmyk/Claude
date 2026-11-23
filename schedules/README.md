@@ -10,8 +10,7 @@ stored privately on the account, never in this repo.
 |---|---|---|---|---|
 | **Staff – daily sweep** (the five coaches) | daily 04:13 | recurring | **Sonnet** | — (reuses a retired film task that already had every connector) |
 | **Ava – Morning** | daily 04:43 | recurring | **Opus** | `Dashboard priorities` (retired) |
-| **CoS – Wake / Home / Wind-down – <day>** (Ava) | at the window times | one-shot, created by Ava – Evening | Opus | the coach's `Coach – Wake – …` one-shots |
-| **Coach – Post: <session> – <day>** | key session end + 20 min | one-shot, created by CoS – Evening | Sonnet | same as now |
+| **Ava – Wake / Home / Wind-down** | fixed times per weekday, set from the usual calendar | recurring (7 tasks, reusing retired tasks so connectors stay) | Opus | the coach's `Coach – Wake – …` one-shots; key-session debriefs fold into Home / Wind-down |
 | **Ava – Evening** | daily 19:13 | recurring | Opus | `Event mode watcher` **and** `Coach check-in planner` (merged into one; the other is disabled) |
 | **Staff – weekly reports** | Sun 19:37 | recurring | Sonnet | — (new) |
 | **CoS – Weekly** (Sunday wind-down) | Sun 21:17 | recurring | Opus | `Weekly review prep` (update its prompt) |
@@ -33,3 +32,6 @@ Note: a recurring task must carry its connectors (Calendar, Todoist, Gmail, Greg
 Claude Code Remote, Drive). Tasks created from a session without connector grants get none, so reuse an
 existing task or create it in the claude.ai scheduled tasks UI.
 5. Update `Weekly review prep` → **CoS – Weekly**, create **Staff – weekly reports**, and update the monthly task.
+
+## Why fixed times
+Scheduled runs are refused when they try to create scheduled tasks, so nothing is created on the fly. Window times are fixed recurring tasks; change them from an interactive session.

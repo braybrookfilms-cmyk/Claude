@@ -49,9 +49,9 @@ Carry those actions out on your next run, and read the recent `ava_chat` message
 
 ## MORNING (daily, before the first window)
 
-1. **Fallback.** List scheduled tasks. If **today's** window tasks (named `CoS – <window> – <Day D Mon>`)
-   don't exist, do the EVENING run's steps 1, 3 and 4 for **today** now, skipping any window that is
-   already past or less than 10 minutes away. Leave the mode as it is.
+1. **Windows.** Work out today's wake, home and wind-down times from the calendar (`contracts/policy.md`)
+   and record them in the brief. The three window runs are fixed recurring tasks: you never create, change
+   or delete scheduled tasks, in any run.
 2. **Execute approved actions.** Query `actions` where `status == "approved"`. Carry out each one
    exactly as its payload says, then set `done` or `failed` and record the `result`. Set
    `status: "expired"` on pending actions past `expires`. Snoozed actions whose `snooze_until` has
@@ -81,6 +81,8 @@ Carry those actions out on your next run, and read the recent `ava_chat` message
      - `wake`: load the `running-coach` skill and include its MORNING section (readiness read, today's
        sessions with their pre-notes). On a Sunday, the review prep goes in `winddown` instead.
      - `home`: what's left of today and what tomorrow needs prepared tonight.
+     - `home` and `winddown`: if a **key** session (sub-threshold, long run, parkrun, race, test, Hyrox
+       sim) ended since the last window, load `running-coach` and include its POST debrief here.
      - `winddown`: tomorrow's shape, one thing to protect, wins, and the wind-down nudge from `life`.
        On Sundays this is the WEEKLY review.
 5. If there's genuinely nothing worth saying, send nothing. Mark the window `sent: false, summary: "quiet"`.
@@ -104,16 +106,10 @@ Carry those actions out on your next run, and read the recent `ava_chat` message
    message. Write a `life` signal with the heads-up or re-entry plan so tonight's `winddown` (or tomorrow's
    `wake`) carries it. Re-entry routine rolls are a standing permission: do them now.
 3. **Windows.** Work out tomorrow's `wake`, `home` and `winddown` times from the calendar. Apply the
-   policy's merge rules for key-session post check-ins. If tomorrow is Sunday, don't create a `winddown`
-   task: the recurring WEEKLY run is Sunday's wind-down message.
-4. **Schedule.** List existing scheduled tasks and skip any that already exist by name. Create one-shot
-   tasks for tomorrow:
-   - `CoS – Wake – <Day D Mon>`, `CoS – Home – …` and `CoS – Wind-down – …`, each with the WINDOW
-     prompt template from `schedules/templates.md`.
-   - `Coach – Post: <session> – <Day D Mon>` for each key session, with the running coach's POST template.
-   - Use `run_once_at` with the correct Europe/London offset, `initiation: "human_schedule"` and
-     `notifications: {"push": true}`.
-5. Finish with one line: tomorrow's mode, the window times, and what you scheduled.
+   policy's rules. On Sunday the WEEKLY run is the wind-down message.
+4. **No scheduling.** Write tomorrow's window times into `briefs/<tomorrow>.windows` (`at` only). Never create,
+   change or delete scheduled tasks: the window runs and key-session debriefs are already covered.
+5. Finish with one line: tomorrow's mode and the window times.
 
 ## WEEKLY (Sunday, after the specialists' weekly reports)
 

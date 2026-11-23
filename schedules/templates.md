@@ -43,7 +43,7 @@ schedules/templates.md). Send no message.
 Finish with one line: tomorrow's mode, the window times, and what you scheduled.
 ```
 
-## WINDOW (one-shot; name `CoS – <Wake|Home|Wind-down> – {DAY}`)
+## WINDOW (recurring tasks `Ava – Wake`, `Ava – Home`, `Ava – Wind-down`; {DATE} = today in Europe/London)
 ```
 {PREAMBLE}
 Run type: WINDOW, window {WINDOW}, date {DATE}. First, silently put this chat on the Dashboard so he can
@@ -55,7 +55,7 @@ Then load chief-of-staff and follow its WINDOW section. The principal gets a pus
 reply in this chat: handle replies as the skill's "When he replies" section says.
 ```
 
-## POST (one-shot; name `Coach – Post: <session> – {DAY}`)
+## POST (retired: key-session debriefs now go in Ava's next window)
 ```
 {PREAMBLE}
 Run type: POST for <session title>, which finished around <end> on {DATE}. Load running-coach and follow

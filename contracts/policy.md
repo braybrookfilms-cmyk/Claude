@@ -24,10 +24,10 @@ The principal has three windows a day. The Chief of Staff sends at most **one me
 Rules:
 - **Merge, don't add.** Anything that would be a separate ping goes into the next window's message.
 - **Running coach check-ins.** Pre-session notes for every session of the day go into the `wake`
-  message. A post-session check-in for a **key** session (sub-threshold, long run, parkrun, race, test,
-  Hyrox sim) is the only push allowed outside a window. It counts toward the cap. That day the
-  Chief of Staff drops the `home` ping and folds its content into `winddown`, unless the post-session
-  check-in lands within 45 min of `home`, in which case the two merge into one message.
+  message. The debrief after a **key** session (sub-threshold, long run, parkrun, race, test, Hyrox sim)
+  goes into the next `home` or `winddown` message. There are no separate coach pushes.
+- **Fixed times.** The three windows run as fixed recurring tasks set from the principal's usual calendar
+  (stored privately on the account). Scheduled runs can't create scheduled tasks, so nothing is created on the fly.
 - **Urgent exception.** Something that needs a decision before the next window (a same-day deadline,
   a safety or health flag) may go out immediately, but it still counts toward the 3. If the budget is spent,
   it waits.

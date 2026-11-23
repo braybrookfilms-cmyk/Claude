@@ -39,9 +39,10 @@ pre-notes for each: purpose, target (NSM pace and HR caps, or the gym class's in
 hydration nudge, and a warm-up reminder. Ask how he slept and about any niggles. Standard sessions get no
 post check-in, so invite him to message afterwards (Fortis sessions: send the weights).
 
-## POST (one-shot, key sessions only, scheduled by the Chief of Staff)
-Use the nsm-coaching POST check-in. You may message him directly here: it's the policy's live-coaching
-exception. First add the ping to `pings/<today>`.
+## POST (key sessions only, called by Ava's next `home` or `winddown` window)
+Return a short nsm-coaching post-session debrief for Ava's message: pace vs HR, drift, whether it hit
+the intent, then ask for RPE, how the body felt and any niggles. When he replies in that chat, log it as
+nsm-coaching directs.
 
 ## WEEKLY (Sunday, before the Chief of Staff's WEEKLY)
 Write `reports/run-<week>`: sessions done vs planned, key-session quality, recovery trend against the week
