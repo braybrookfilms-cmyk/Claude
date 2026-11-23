@@ -15,8 +15,8 @@
 
 ## Flow of a day
 ```
-04:13  Staff sweep      run · life · money · biz · growth check their watches → signals / actions
-04:45  CoS Morning      executes approved actions, expires stale items, sets top 3, writes briefs/<today>
+04:13  CoS Morning      part 1: run · life · money · biz · growth check their watches → signals / actions
+                        part 2: executes approved actions, expires stale items, sets top 3, writes briefs/<today>
 wake   CoS window       brief + running coach's morning read + "Needs you" approvals       (ping 1)
        (key session)    running coach post check-in                                         (counts as a ping)
 home   CoS window       what's left of today, what tomorrow needs prepared                  (ping 2)

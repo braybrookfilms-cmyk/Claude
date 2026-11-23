@@ -8,8 +8,7 @@ stored privately on the account, never in this repo.
 
 | Task | When | Type | Model | Replaces |
 |---|---|---|---|---|
-| **Staff – daily sweep** | daily 04:13 | recurring | Sonnet | — (new) |
-| **CoS – Morning** | daily 04:45 | recurring | Sonnet | `Dashboard priorities` (update its prompt to keep its history) |
+| **CoS – Morning (staff sweep + brief)** | daily 04:13 | recurring | Opus | `Dashboard priorities` (retired). One session: the five DAILY sweeps, then the CoS MORNING section. Reuses a retired task that already had every connector attached. |
 | **CoS – Wake / Home / Wind-down – <day>** | at the window times | one-shot, created by CoS – Evening | Opus | the coach's `Coach – Wake – …` one-shots |
 | **Coach – Post: <session> – <day>** | key session end + 20 min | one-shot, created by CoS – Evening | Sonnet | same as now |
 | **CoS – Evening** | daily 19:13 | recurring | Sonnet | `Event mode watcher` **and** `Coach check-in planner` (merged into one; the other is disabled) |
@@ -24,8 +23,12 @@ the two disabled film tasks, the two disabled social tasks and the two old
 per-weekday priorities tasks.
 
 ## Cutover order
-1. Seed `agents/*` on the Dashboard (charters, personal watches, source links).
-2. Update `Dashboard priorities` → **CoS – Morning**, and create **Staff – daily sweep**.
-3. Update `Coach check-in planner` → **CoS – Evening**, and disable `Event mode watcher`.
+1. ✅ Seed `agents/*` on the Dashboard (charters, personal watches, source links).
+2. ✅ **CoS – Morning (staff sweep + brief)** live; `Dashboard priorities` disabled.
+3. ✅ `Coach check-in planner` → **CoS – Evening**; `Event mode watcher` disabled.
 4. Check the first evening's one-shot window tasks before they fire.
+
+Note: a recurring task must carry its connectors (Calendar, Todoist, Gmail, Gregaria, AccuWeather,
+Claude Code Remote, Drive). Tasks created from a session without connector grants get none, so reuse an
+existing task or create it in the claude.ai scheduled tasks UI.
 5. Update `Weekly review prep` → **CoS – Weekly**, create **Staff – weekly reports**, and update the monthly task.
