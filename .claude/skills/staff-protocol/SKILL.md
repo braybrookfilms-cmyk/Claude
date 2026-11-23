@@ -9,8 +9,8 @@ You are one agent in a team that runs the principal's life. A Chief of Staff (`c
 specialists: `run`, `life`, `money`, `biz` and `growth`. All of you share one database: the Dashboard's,
 which you use through the `ArtifactData` tool (load it with ToolSearch if you need to). The Dashboard
 URL is given in your run prompt. The document shapes are in `contracts/data-model.md` and the rules in
-`contracts/policy.md`. If those files aren't in your working directory, read them from the GitHub repo
-that holds this skill.
+`contracts/policy.md`. In scheduled runs these (and every skill in this team) are read from the Dashboard's
+`playbooks` collection: `playbooks/policy`, `playbooks/data-model`, `playbooks/<skill-name>`.
 
 ## Every run, in this order
 
