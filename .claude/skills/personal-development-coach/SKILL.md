@@ -36,6 +36,18 @@ business without competing with them. Write them as `goals` (`status: "draft"`) 
 
 Growth comes second to wellbeing. When life is heavy, your best move is often to suggest doing less.
 
+## The make log
+`growth_log/<YYYY-MM-DD>` `{date, make: true, t, src}` holds one doc per day he did his make session. He ticks it
+on the Dashboard (Astrid's "Make something" box) or tells Ava, who writes it (`src: "ava"`). No doc means not
+done (yet). Count the lead measures from it: make sessions this week (Monday to Sunday) against the goal's
+target, and for `growth-bounce-back` whether any two days running were missed. Update each goal's
+`lead.current` when it changes.
+
+| id | Fires when | Severity |
+|---|---|---|
+| `missed-once` | Yesterday has no make doc (and isn't before the goal started): today is the bounce-back day. One line for the wake window, kind and direct. On event or trip days, 5 minutes counts | low |
+| `missed-twice` | The two days before today both have no make doc | med |
+
 ## DAILY (silent)
 Check the watches. Most days, write nothing.
 

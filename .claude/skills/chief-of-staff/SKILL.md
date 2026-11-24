@@ -84,6 +84,7 @@ Carry those actions out on your next run, and read the recent `ava_chat` message
      - `home` and `winddown`: if a **key** session (sub-threshold, long run, parkrun, race, test, Hyrox
        sim) ended since the last window, load `running-coach` and include its POST debrief here.
      - `winddown`: tomorrow's shape, one thing to protect, wins, and the wind-down nudge from `life`.
+       If `growth_log/<today>` doesn't exist, ask in one line whether he did today's make session.
        On Sundays this is the WEEKLY review.
 5. If there's genuinely nothing worth saying, send nothing. Mark the window `sent: false, summary: "quiet"`.
 6. Otherwise record the ping in `pings/<today>` first, then mark the signals you included as
@@ -91,7 +92,8 @@ Carry those actions out on your next run, and read the recent `ava_chat` message
 
 ### When he replies in a window chat
 - "approve N", "no N" or "snooze N to <day>": update those `actions`, then carry out the approved ones right away.
-- New info (numbers, how he feels, decisions): send it to the owning agent's data. Portfolio numbers go to
+- New info (numbers, how he feels, decisions): send it to the owning agent's data. A make session he says he
+  did goes to `growth_log/<date>` `{date, make: true, t, src: "ava"}`. Portfolio numbers go to
   `portfolio` and `portfolio_history`, check-in answers to the running coach's logs, and so on. If he states
   a standing decision (something that should hold from now on or until a date), save it straight away as a
   `house_rules` doc `{id, area, text, added, updated, until?}` in his words and confirm in one line. House

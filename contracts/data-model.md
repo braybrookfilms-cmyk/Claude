@@ -125,6 +125,16 @@ Actions he asks for directly in the Dashboard chat are created already `approved
 {"date": "…", "count": 1, "sent": [{"at": "07:02", "window": "wake", "by": "cos", "summary": "…"}]}
 ```
 
+### `biz_state/summary`: Coach Quest summary for the Dashboard (biz)
+A copy of the quest tracker's progress, written by the business coach on every run, because the page can't
+read the tracker's own database. Shape and rules: `business-coach` skill, "Dashboard summary".
+
+### `growth_log/<YYYY-MM-DD>`: make sessions (growth)
+```json
+{"date": "2026-11-24", "make": true, "t": 1764000000000, "src": "dashboard|dashboard-chat|ava"}
+```
+One doc per day he did his make session. Deleting it un-ticks the day.
+
 ### `interviews/<agent>`: intake interview state
 ```json
 {"agent": "growth", "status": "not_started|in_progress|done", "answers": {}, "outcome": "…", "updated": "…"}
