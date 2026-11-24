@@ -26,12 +26,12 @@ per-weekday priorities tasks.
 1. ✅ Seed `agents/*` on the Dashboard (charters, personal watches, source links).
 2. ✅ **CoS – Morning (staff sweep + brief)** live; `Dashboard priorities` disabled.
 3. ✅ `Coach check-in planner` → **CoS – Evening**; `Event mode watcher` disabled.
-4. Check the first evening's one-shot window tasks before they fire.
+4. ✅ First day checked (24 Nov): 3/3 messages, no agent errors, approvals carried out.
 
 Note: a recurring task must carry its connectors (Calendar, Todoist, Gmail, Gregaria, AccuWeather,
 Claude Code Remote, Drive). Tasks created from a session without connector grants get none, so reuse an
 existing task or create it in the claude.ai scheduled tasks UI.
-5. Update `Weekly review prep` → **CoS – Weekly**, create **Staff – weekly reports**, and update the monthly task.
+5. ✅ `Weekly review prep` → **Ava – Weekly review** (Sun 21:17), **Staff – weekly reports** (Sun 19:37, reusing a retired task), monthly task → **Ava – Monthly check-in**.
 
 ## Why fixed times
 Scheduled runs are refused when they try to create scheduled tasks, so nothing is created on the fly. Window times are fixed recurring tasks; change them from an interactive session.
